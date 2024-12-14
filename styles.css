@@ -11,6 +11,40 @@ body {
     line-height: 1.6;
     background-color: #96c7c5;
     color: #161313;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Motyw ciemny */
+body.dark-mode {
+    background-color: #161313;
+    color: #dfed79;
+}
+
+body.dark-mode header {
+    background-color: #3a3a3a;
+    color: #dfed79;
+}
+
+body.dark-mode .experience-item,
+body.dark-mode .education-item {
+    background-color: #3a3a3a;
+    color: #dfed79;
+}
+
+body.dark-mode footer {
+    background-color: #3a3a3a;
+    color: #dfed79;
+}
+
+body.dark-mode #contact form {
+    background-color: #3a3a3a;
+}
+
+body.dark-mode input, 
+body.dark-mode textarea {
+    background-color: #4a4a4a;
+    color: #dfed79;
+    border: 1px solid #dfed79;
 }
 
 /* Nagłówek */
@@ -30,6 +64,15 @@ header p {
     margin-top: 10px;
 }
 
+#theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-top: 20px;
+    color: inherit;
+}
+
 /* Kontener dla wszystkich sekcji */
 .container {
     width: 80%;
@@ -44,10 +87,10 @@ section {
 h2 {
     font-size: 2rem;
     margin-bottom: 10px;
-    color: #161313;
+    color: inherit;
 }
 
-/* Doświadczenie */
+/* Doświadczenie i edukacja */
 .experience-item,
 .education-item {
     background-color: #dfed79;
@@ -55,14 +98,16 @@ h2 {
     margin-bottom: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: #161313;
 }
 
 .experience-item h3,
 .education-item h3 {
     font-size: 1.5rem;
-    color: #161313;
+    color: inherit;
 }
 
+/* Listy w doświadczeniu i edukacji */
 .experience-item ul,
 .education-item ul {
     list-style: none;
@@ -83,6 +128,51 @@ ul {
 ul li {
     font-size: 1.1rem;
     margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+ul li i {
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+
+/* Formularz kontaktowy */
+#contact form {
+    display: flex;
+    flex-direction: column;
+    background-color: #dfed79;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#contact form label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#contact form input,
+#contact form textarea {
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #161313;
+    border-radius: 4px;
+}
+
+#contact form button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #161313;
+    color: #dfed79;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#contact form button:hover {
+    background-color: #333333;
 }
 
 /* Stopka */
@@ -93,7 +183,7 @@ footer {
     padding: 20px 0;
 }
 
-/* Media Queries dla responsywności */
+/* Responsywność */
 @media (max-width: 768px) {
     .container {
         width: 90%;
@@ -114,10 +204,13 @@ footer {
     .experience-item, .education-item {
         padding: 10px;
     }
-}.profile-img {
-    width: 150px;         /* szerokość zdjęcia */
-    height: 150px;        /* wysokość zdjęcia */
-    border-radius: 50%;   /* zaokrąglenie rogów, żeby zdjęcie było okrągłe */
+}
+
+/* Styl dla zdjęcia profilowego */
+.profile-img {
+    width: 150px;         /* szerokość */
+    height: 150px;        /* wysokość  */
+    border-radius: 50%;   /* zaokrąglenie rogów*/
     object-fit: cover;    /* upewnia się, że zdjęcie dobrze dopasowuje się do kontenera */
     margin-right: 20px;   /* odstęp po prawej stronie zdjęcia */
 }
