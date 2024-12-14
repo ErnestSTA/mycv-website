@@ -65,12 +65,27 @@ header p {
 }
 
 #theme-toggle {
+    display: inline-flex; /* Ustawienie flexa na przycisku */
+    align-items: center;  /* Wyrównanie pionowe ikon i tekstu */
     background: none;
     border: none;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     cursor: pointer;
     margin-top: 20px;
     color: inherit;
+    padding: 5px 10px;
+    border-radius: 5px;
+    gap: 8px; /* Odstęp między ikoną a tekstem */
+}
+
+#theme-toggle:hover {
+    background-color: rgba(0,0,0,0.1);
+}
+
+.icon-bulb {
+    width: 20px; /* Ustaw żądany rozmiar, np. 20px */
+    height: auto; 
+    display: inline-block;
 }
 
 /* Kontener dla wszystkich sekcji */
@@ -132,9 +147,10 @@ ul li {
     align-items: center;
 }
 
-ul li i {
+.skill-icon {
+    width: 32px;
+    height: auto;
     margin-right: 10px;
-    font-size: 1.5rem;
 }
 
 /* Formularz kontaktowy */
@@ -208,9 +224,9 @@ footer {
 
 /* Styl dla zdjęcia profilowego */
 .profile-img {
-    width: 150px;         /* szerokość */
-    height: 150px;        /* wysokość  */
-    border-radius: 50%;   /* zaokrąglenie rogów*/
-    object-fit: cover;    /* upewnia się, że zdjęcie dobrze dopasowuje się do kontenera */
-    margin-right: 20px;   /* odstęp po prawej stronie zdjęcia */
+    width: 150px;  
+    height: 150px; 
+    border-radius: 50%;
+    object-fit: cover; 
+    margin-right: 20px;
 }
